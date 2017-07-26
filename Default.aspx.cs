@@ -171,21 +171,21 @@ namespace Add_update_delete_gridview
             MySqlConnection con = new MySqlConnection(ConStr);
            
 
-            MySqlCommand com = new MySqlCommand("Update Employee.EmployeeDetails set DOB=@DOB,Sex=@Sex,Qualification=@Qualification,CollegeName=@CollegeName,PassedOutYear=@PassedOutYear,Salary=@Salary,Department=@Department,Address=@Address,MobileNo=@MobileNo,EmailId=@EmailId where EmployeeNo=@EmployeeNo", con);
+            MySqlCommand com = new MySqlCommand("Update Employee.EmployeeDetails set EmployeeName=@EmployeeName,DOB=@DOB,Sex=@Sex,Qualification=@Qualification,CollegeName=@CollegeName,PassedOutYear=@PassedOutYear,Salary=@Salary,Department=@Department,Address=@Address,MobileNo=@MobileNo,EmailId=@EmailId where EmployeeNo=@EmployeeNo", con);
             con.Open();
 
             com.Parameters.AddWithValue("@EmployeeNo", EmployeeNo);
             com.Parameters.AddWithValue("@EmployeeName", txt_EmployeeName.Text);
-            com.Parameters.AddWithValue("@EmployeeDOB", txt_EmployeeDOB.Text);
-            com.Parameters.AddWithValue("@EmployeeSex", txt_EmployeeSex.Text);
-            com.Parameters.AddWithValue("@EmployeeQualification", txt_EmployeeQualification.Text);
-            com.Parameters.AddWithValue("@EmployeeCollegeName", txt_EmployeeCollegeName.Text);
-            com.Parameters.AddWithValue("@EmployeePassedOutYear", txt_EmployeePassedOutYear.Text);
-            com.Parameters.AddWithValue("@EmployeeSalary", txt_EmployeeSalary.Text);
-            com.Parameters.AddWithValue("@EmployeeDepartment", txt_EmployeeDepartment.Text);
-            com.Parameters.AddWithValue("@EmployeeMobileNo", txt_EmployeeMobileNo.Text);
-            com.Parameters.AddWithValue("@EmployeeAddress", txt_EmployeeAddress.Text);
-            com.Parameters.AddWithValue("@EmployeeEmailId", txt_EmployeeEmailId.Text);
+            com.Parameters.AddWithValue("@DOB", txt_EmployeeDOB.Text);
+            com.Parameters.AddWithValue("@Sex", txt_EmployeeSex.Text);
+            com.Parameters.AddWithValue("@Qualification", txt_EmployeeQualification.Text);
+            com.Parameters.AddWithValue("@CollegeName", txt_EmployeeCollegeName.Text);
+            com.Parameters.AddWithValue("@PassedOutYear", txt_EmployeePassedOutYear.Text);
+            com.Parameters.AddWithValue("@Salary", txt_EmployeeSalary.Text);
+            com.Parameters.AddWithValue("@Department", txt_EmployeeDepartment.Text);
+            com.Parameters.AddWithValue("@MobileNo", txt_EmployeeMobileNo.Text);
+            com.Parameters.AddWithValue("@Address", txt_EmployeeAddress.Text);
+            com.Parameters.AddWithValue("@EmailId", txt_EmployeeEmailId.Text);
 
             com.ExecuteNonQuery();
             com.Dispose();
