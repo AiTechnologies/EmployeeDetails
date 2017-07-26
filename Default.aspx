@@ -32,7 +32,7 @@
                         errormessage="Please enter the EmployeeName">
                     </asp:requiredfieldvalidator>
                 </td>
-                <asp:Label ID="LabelEmployeeName" runat="server" Visible="false"></asp:Label>
+               
             </tr>
              <tr>
                 <td>
